@@ -15,9 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/blog', function () {
+/*Route::get('/blog', function () {
     return view('blog.index');
-});
+});*/
+
+Route::get('/blog', [
+    'uses' => 'BlogController@index',
+]);
 
 Route::get('/blog/show', function () {
     return view('blog.show');

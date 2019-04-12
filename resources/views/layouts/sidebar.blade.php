@@ -18,23 +18,15 @@
             <div class="widget-body">
                 <ul class="categories">
                     <li>
-                        <a href="#"><i class="fa fa-angle-right"></i> Web Development</a>
+                        <a href="#"><i class="fa fa-angle-right"></i> Category 1</a>
                         <span class="badge pull-right">10</span>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-angle-right"></i> Web Design</a>
+                        <a href="#"><i class="fa fa-angle-right"></i> Category 2</a>
                         <span class="badge pull-right">10</span>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-angle-right"></i> General</a>
-                        <span class="badge pull-right">10</span>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-angle-right"></i> DIY</a>
-                        <span class="badge pull-right">10</span>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-angle-right"></i> Facebook Development</a>
+                        <a href="#"><i class="fa fa-angle-right"></i> Category 3</a>
                         <span class="badge pull-right">10</span>
                     </li>
                 </ul>
@@ -96,14 +88,8 @@
             </div>
             <div class="widget-body">
                 <ul class="tags">
-                    <li><a href="#">PHP</a></li>
-                    <li><a href="#">Codeigniter</a></li>
-                    <li><a href="#">Yii</a></li>
-                    <li><a href="#">Laravel</a></li>
-                    <li><a href="#">Ruby on Rails</a></li>
-                    <li><a href="#">jQuery</a></li>
-                    <li><a href="#">Vue Js</a></li>
-                    <li><a href="#">React Js</a></li>
+                    <li><a href="#">TAG 1</a></li>
+                    <li><a href="#">TAG 2</a></li>
                 </ul>
             </div>
         </div>

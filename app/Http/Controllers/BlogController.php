@@ -11,10 +11,21 @@ class BlogController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     *
      */
+
+    protected $limit = 3;
     public function index()
     {
-        $posts = Post::all();
+        /*\DB::enableQueryLog();
+        $posts = Post::with('author')->get();
+        //$posts = Post::all();
+        view('blog.index', compact('posts'))->render();
+
+        dd(\DB::getQueryLog());*/
+        //$posts = Post::with('author')->orderBy('created_at', 'desc')->get();
+        //$posts = Post::with('author')->latest()->get();
+        $posts = Post::with('author')->latestFirst()->published()->paginate($this->limit); //simplepagenate()
         return view('blog.index', compact('posts'));
     }
 

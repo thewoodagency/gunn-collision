@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use GrahamCampbell\Markdown\Facades\Markdown;
 
 class Post extends Model
 {
@@ -29,6 +30,14 @@ class Post extends Model
         }
 
         return "/img/" . $this->image;
+    }
+
+    public function getBodyHtmlAttribute() {
+        return $this->body ? Markdown::convertToHtml(e($this->body)) : NULL;
+    }
+
+    public function getExcerptHtmlAttribute() {
+        return $this->excerpt ? Markdown::convertToHtml(e($this->excerpt)) : NULL;
     }
 
     public function getDateAttribute()

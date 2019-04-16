@@ -17,18 +17,12 @@
             </div>
             <div class="widget-body">
                 <ul class="categories">
-                    <li>
-                        <a href="#"><i class="fa fa-angle-right"></i> Category 1</a>
-                        <span class="badge pull-right">10</span>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-angle-right"></i> Category 2</a>
-                        <span class="badge pull-right">10</span>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-angle-right"></i> Category 3</a>
-                        <span class="badge pull-right">10</span>
-                    </li>
+                    @foreach($categories as $category)
+                        <li>
+                            <a href="{{ route('category', $category->id) }}"><i class="fa fa-angle-right"></i> {{ $category->title }}</a>
+                            <span class="badge pull-right">{{ $category->posts->count() }}</span>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
